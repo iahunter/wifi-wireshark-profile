@@ -1,0 +1,11 @@
+"Authentications" wlan.fc.type_subtype == 0x000b
+"EAP Authentications" eapol.type == 0
+"AP Beacons for BSSID" (wlan.fc.type_subtype == 0x0008) && (wlan.bssid == 14:9d:11:22:33:44)
+"AP Beacons for SSID" (wlan.fc.type_subtype == 0x0008) && (wlan.ssid == "TEST")
+
+"Deauthntications" wlan.fc.type_subtype == 0x000c
+"Disaccociates" wlan.fc.type_subtype == 0x000a
+"EAP Auth on MAC" (eapol.type == 0) && (wlan.addr == 14:d0:11:22:33:44)
+"AP Beacons" wlan.fc.type_subtype == 0x0008
+"MAC Filter" wlan.addr == 14:9d:11:22:33:44
+"Authentications" wlan.fc.type_subtype == 0x000b
