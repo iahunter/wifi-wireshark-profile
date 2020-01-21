@@ -6,7 +6,7 @@ Clone Repo
 git clone https://github.com/iahunter/wifi-wireshark-profile.git
 ```
 
-## Copy 
+## Copy Profile to User Profile
 ```
 cp wifi-wireshark-profiles/WirelessProfile $USER/.config/wireless/profiles
 ```
