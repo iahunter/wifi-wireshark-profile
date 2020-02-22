@@ -1,11 +1,34 @@
+"Weak Signal" wlan_radio.signal_dbm lt -75
+"Retry" wlan.fc.retry==1
+"CF-END/CF-ACK" wlan.fc.type_subtype == 31
+"CF-END" wlan.fc.type_subtype == 30
+"ACK" wlan.fc.type_subtype == 29
+"Clear to Send (CTS)" wlan.fc.type_subtype == 28
+"Ready to Send (RTS)" wlan.fc.type_subtype == 27
+"PS-Poll" wlan.fc.type_subtype == 26
+"Block ACK" wlan.fc.type_subtype == 25
+"Block ACK Request" wlan.fc.type_subtype == 24
+"Action" wlan.fc.type_subtype == 13
+"ATIM" wlan.fc.type_subtype == 9
+"Reassociation Response" wlan.fc.type_subtype == 3
+"Reassociation Request" wlan.fc.type_subtype == 2
+"Channel Utilization 80%" wlan.qbss.cu>204
+"Probe Response" wlan.fc.type_subtype == 5
 "Authentications" wlan.fc.type_subtype == 0x000b
 "EAP Authentications" eapol.type == 0
 "AP Beacons for BSSID" (wlan.fc.type_subtype == 0x0008) && (wlan.bssid == 14:9d:11:22:33:44)
 "AP Beacons for SSID" (wlan.fc.type_subtype == 0x0008) && (wlan.ssid == "TEST")
-
 "Deauthntications" wlan.fc.type_subtype == 0x000c
 "Disaccociates" wlan.fc.type_subtype == 0x000a
 "EAP Auth on MAC" (eapol.type == 0) && (wlan.addr == 14:d0:11:22:33:44)
 "AP Beacons" wlan.fc.type_subtype == 0x0008
 "MAC Filter" wlan.addr == 14:9d:11:22:33:44
-"Authentications" wlan.fc.type_subtype == 0x000b
+"Probe Request" wlan.fc.type_subtype == 4
+"Retransmission " wlan.fc.retry==1
+"802.1x" eapol
+"802.1x mac " (wlan.addr==14:9d:11:22:33:44 and not wlan.fc.type==1) || eapol
+"All Management Frames" wlan.fc.type==0
+"Association Request" wlan.fc.type_subtype == 0
+"Association Response" wlan.fc.type_subtype == 1
+"All Data Frames" wlan.fc.type ==2
+"All Controll Frames" wlan.fc.type == 1
