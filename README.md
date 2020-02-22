@@ -8,5 +8,5 @@ git clone https://github.com/iahunter/wifi-wireshark-profile.git
 
 ## Copy Profile to User Profile
 ```
-cp wifi-wireshark-profiles/WirelessProfile $USER/.config/wireshark/profiles
+cp wifi-wireshark-profiles $USER/.config/wireshark/profiles
 ```
